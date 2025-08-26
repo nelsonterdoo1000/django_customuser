@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home | Custom Inventory Software{% endblock %}
+
+{% block content %}
+    <h2>List of Products in Inventory</h2>
+    <table>
+        {% for product in products %}
+        <tr>
+            <th>{{product.name}}</th>
+            <th>{{product.category}}</th>
+            <th>{{product.quantity}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <a href="/">Home</a>
+            {% comment %} <a href="/about/">About</a> {% endcomment %}
+            {% comment %} <a href="/contact/">Contact</a> {% endcomment %}
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- Default content goes here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; {{ year }} Custom Inventory Software</p>
+    </footer>
+</body>
+</html>
